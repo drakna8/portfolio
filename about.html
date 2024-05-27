@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Me - Team Blacky</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .container {
+            margin-bottom: 50px;
+        }
+
+        .cat {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+        }
+
+        .cat__ear {
+            position: absolute;
+            width: 30px;
+            height: 50px;
+            background: #000;
+            border-radius: 50%;
+            transform: rotate(45deg);
+        }
+
+        .cat__ear:nth-child(1) {
+            top: -20px;
+            left: -15px;
+        }
+
+        .cat__ear:nth-child(2) {
+            top: -20px;
+            right: -15px;
+        }
+
+        .cat__face {
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            width: 80px;
+            height: 80px;
+            background: #000;
+            border-radius: 50%;
+        }
+
+        .cat__eye {
+            position: absolute;
+            top: 25px;
+            width: 15px;
+            height: 15px;
+            background: #fff;
+            border-radius: 50%;
+        }
+
+        .cat__eye:nth-child(1) {
+            left: 15px;
+        }
+
+        .cat__eye:nth-child(2) {
+            right: 15px;
+        }
+
+        .cat__nose {
+            position: absolute;
+            top: 50px;
+            left: 35px;
+            width: 10px;
+            height: 10px;
+            background: #ff6666;
+            border-radius: 50%;
+        }
+
+        .cat__whiskers {
+            position: absolute;
+            top: 60px;
+            width: 50px;
+            height: 2px;
+            background: #fff;
+        }
+
+        .cat__whiskers:nth-child(5) {
+            left: 0;
+        }
+
+        .cat__whiskers:nth-child(6) {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>I AM THE BLACKY</h1>
+        <p>I AM 97 YEAR OLD</p>
+        <p>I AM A WEB DEVELOPER</p>
+        <p>I AM A CYBER SECURITY RESEARCHER</p>
+        <p>I A AM CAT LOVER</p>
+        <p>I CAN ALWAYS SEARCH FOR RAT'S IN OTHERS SERVER</p>
+        <p>I HAVE ACCESS TO MORE THAN 10K WEBSITES</p>
+        <p>I HAVE DEVELOPED MORE THAN 160 WEBSITES</p>
+        <p>BLA.. BLA... BLA........... BLA.......</p>
+        <p>KARMA RETURNS .......................</p>
+        <p>TEAM BLACKY....................</p>
+        <p>WE ARE HELPERS.......................</p>
+        <p>WE SECURE YOUR WEBSITE FROM YOUR BACK.................</p>
+    </div>
+    <div class="cat">
+        <div class="cat__ear"></div>
+        <div class="cat__ear"></div>
+        <div class="cat__face">
+            <div class="cat__eye"></div>
+            <div class="cat__eye"></div>
+            <div class="cat__nose"></div>
+            <div class="cat__whiskers"></div>
+            <div class="cat__whiskers"></div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const eyes = document.querySelectorAll('.cat__eye');
+            document.addEventListener('mousemove', (e) => {
+                const x = e.clientX / window.innerWidth;
+                const y = e.clientY / window.innerHeight;
+                
+                eyes.forEach(eye => {
+                    eye.style.transform = `translate(${x * 20 - 10}px, ${y * 20 - 10}px)`;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
